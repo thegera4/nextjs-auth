@@ -1,14 +1,12 @@
 import { verifyPassword } from '@/lib/auth';
 import { connectToDatabase } from '@/lib/db';
 import NextAuth from 'next-auth'
-import Credentials from 'next-auth/providers/credentials';
-
+import Credentials from 'next-auth/providers/credentials'
 
 export default NextAuth({
   // Configure session options (for credentials you must use JWT)
   session: {
     strategy: 'jwt',
-
   },
   // Configure one or more authentication providers
   providers: [
@@ -47,5 +45,4 @@ export default NextAuth({
       }
     })
   ],
-
 });
